@@ -1,0 +1,70 @@
+# Listing of Parameters
+# ---------------------
+# Path to the directory in which the vessel parameterfiles are saved.
+set Directory of the vessels parameters = ./1-single_vessel/vessels_prm
+
+# Polynomial degree of the finite element space
+set Finite element polynomial degree    = 2
+
+# Name of the VTK file containing the mesh.
+set Mesh file                           = ./1-single_vessel/single_vessel.vtk
+
+
+subsection Temporal parameters
+  # Value of initial time [s].
+  set Initial time = 0.00
+
+  # Value of time at which the simulations is stopped [s].
+  set Final time   = 0.10
+
+  # Length of the discrete time step [s].
+  set Time step    = 1e-4
+end
+
+
+subsection Blood flow model parameters
+  # Momentum flux correction coefficient (Coriolis coefficient).
+  set Alpha                        = 1.0
+
+  # Value of the density of the blood [g cm^-3].
+  set Density                      = 1.05
+
+  # Friction parameter due to blood viscosity. It is function of the blood
+  # profile law chosen. See references for further explanations.
+  set Friction                     = 2.419
+
+  # Decide wether overwriting over all the network with the above parameters
+  # or not. Available values are true or false. Default is true. Note: current
+  # implementation supports only the true value.
+  set Overwrite vessels parameters = true
+end
+
+
+subsection Branching parameters
+  # Value of parameter Gamma for the vessel approaching the node.
+  set Gamma 1 = 0.0
+
+  # Value of parameter Gamma for the first vessel leaving the node.
+  set Gamma 2 = 0.0
+
+  # Value of parameter Gamma for the second vessel leaving the node.
+  set Gamma 3 = 0.0
+end
+
+
+subsection Newton solver for branching conditions
+  # Value of the relative tolerance used in the Newton solver.
+  set Relative tolerance = 1e-5
+
+  # Maximum number of iterations used in the newton solver.
+  set Iterations         = 1000
+end
+
+
+subsection Output
+  # Decide wether to save the output files.
+  set Enable output                = true
+
+  # VTU is written only once every n time_steps.
+  set Print VTU every n time_steps = 10
+end

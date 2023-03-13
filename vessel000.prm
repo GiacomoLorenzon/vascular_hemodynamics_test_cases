@@ -1,0 +1,59 @@
+# Listing of Parameters
+# ---------------------
+
+# cgs system
+# please see: https://www.overleaf.com/project/62e4086d89a3bf31a6f69cfd
+
+# Model-related parameters
+# --------------------------
+
+subsection Physical constants and models
+  set Alpha = 1.0
+  set Density = 1.0
+  set Friction = 2.419
+  subsection Beta
+    set Function constants = b0=1561470
+    set Function expression = b0
+  end
+  subsection A0
+    set Function expression = 6.789
+  end
+end
+subsection Mesh and space discretization
+  set Number of refinements = 3
+end
+subsection Triangulation
+  set Adapt the mesh to the stiffness = false
+  set Fraction of cells to refine = 0.3
+  set Maximum number of cells = 32
+  set Minimum mesh size = 0.016
+end
+
+# Initial condition: area
+# -------------------------------
+subsection Initial condition area
+  set Function expression = 6.789
+end
+
+# Initial condition: flux
+# -------------------------------
+subsection Initial condition flux
+    set Function expression = 1
+end
+# Boundary conditions
+# -------------------------------
+subsection Boundary conditions
+  set Inflow condition type = Flux
+  set Outflow condition type = None
+
+  subsection Inflow condition flux
+    set Function constants  = pi=3.1415926536
+    set Function expression = if(t-floor(t)<0.5, 1+20*(sin(2*pi*(t)))^2, 1)
+    set Variable names      = x,y,z,t
+  end
+end
+
+subsection Linear solver
+  set Maximum number of iterations = 1000
+  set Tolerance = 1e-04
+end
