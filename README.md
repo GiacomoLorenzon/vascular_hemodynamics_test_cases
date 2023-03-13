@@ -8,11 +8,14 @@ Those files are supposed to be used within the **<kbd>life<sup>x</sup></kbd>**
 
 ## Tests list
 The available tests are:
-+ Single vessel;
-+ Single vessel with stent implant;
-+ Single vessel with stent implant and adaptive mesh;
-+ Bifurcation of a single vessel;
-+ Small vessels network.
+1. Single vessel;
+2. Single vessel with stent implant;
+3. Single vessel with stent implant and adaptive mesh;
+4. Bifurcation of a single vessel;
+5. Small vessels network.
+
+Each folder contains two subfolders: **data** has in it the input files,
+whereas **results** stores the output of those very same simulations.
 
 ## Get the software
 To download, install or use **<kbd>life<sup>x</sup></kbd>**, please refer to
