@@ -20,7 +20,7 @@ end
 
 subsection Mesh and space discretization
   # Number of uniform refinements of the mesh.
-  set Number of refinements = 5
+  set Number of refinements = 7
 end
 
 subsection Triangulation
@@ -34,7 +34,7 @@ subsection Triangulation
 
   # Maximum number of intervals flagged at each iteration of the
   # refinement algorithm.
-  set Maximum number of cells = 64
+  set Maximum number of cells = 190
 
   # Minimuim size of the mesh element after refinement.
   set Minimum mesh size = 0.000977
