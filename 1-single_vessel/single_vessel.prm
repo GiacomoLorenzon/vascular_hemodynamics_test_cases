@@ -1,13 +1,13 @@
 # Listing of Parameters
 # ---------------------
 # Path to the directory in which the vessel parameter files are saved.
-set Directory of the vessels parameters = ./vessel_prm_files
+set Directory of the vessels parameters = ./1-single_vessel/vessel_prm_files
 
 # Polynomial degree of the finite element space.
 set Finite element polynomial degree    = 1
 
 # Name of the VTK file containing the mesh.
-set Mesh file                           = ./single_vessel.vtk
+set Mesh file                           = ./1-single_vessel/single_vessel.vtk
 
 
 subsection Temporal parameters
