@@ -34,17 +34,17 @@ subsection Blood flow model parameters
   set Friction                     = 0.0
 end
 
-  subsection Boundary condition
-    set Inflow condition type = Flux
+subsection Boundary condition
+  set Inflow condition type = Flux
 
-    # Mathematical expression of the inflow flux or area. The function should
-    # depend on the physical 3D space coordinates and on time.
-    subsection Inflow condition expression
-    set Function constants  = pi=3.1415926536, E=1, c0=10.0, T=8
-    set Function expression = if(t<T/(2*c0), (E*sin(2*pi/T*c0*t))^2, 0.0)
-      set Variable names      = x,y,z,t
-    end
+  # Mathematical expression of the inflow flux or area. The function should
+  # depend on the physical 3D space coordinates and on time.
+  subsection Inflow condition expression
+  set Function constants  = pi=3.1415926536, E=1, c0=10.0, T=8
+  set Function expression = if(t<T/(2*c0), (E*sin(2*pi/T*c0*t))^2, 0.0)
+    set Variable names      = x,y,z,t
   end
+end
 
 subsection Output
   # Decide wether to save the output files.
