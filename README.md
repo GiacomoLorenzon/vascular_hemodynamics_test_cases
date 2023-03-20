@@ -11,8 +11,7 @@ The available tests are:
 1. Single vessel;
 2. Single vessel with stent implant;
 3. Single vessel with stent implant and adaptive mesh;
-4. Bifurcation of a single vessel;
-5. Small vessels network.
+4. Bifurcation of a single vessel.
 
 Each folder contains two subfolders: **data** has in it the input files,
 whereas **results** stores the output of those very same simulations.
