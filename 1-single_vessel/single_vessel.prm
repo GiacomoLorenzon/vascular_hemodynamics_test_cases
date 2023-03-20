@@ -7,7 +7,7 @@ set Directory of the vessels parameters = ./vessel_prm_files
 set Finite element polynomial degree    = 1
 
 # Name of the VTK file containing the mesh.
-set Mesh file                           = ./vessel.vtk
+set Mesh file                           = ./single_vessel.vtk
 
 
 subsection Temporal parameters
