@@ -1,0 +1,55 @@
+# Listing of Parameters
+# ---------------------
+# Path to the directory in which the vessel parameter files are saved.
+set Directory of the vessels parameters = ./vessel_prm_files
+
+# Polynomial degree of the finite element space
+set Finite element polynomial degree    = 1
+
+# Name of the VTK file containing the mesh.
+set Mesh file                           = ./stented_vessel.vtk
+
+
+subsection Temporal parameters
+  # Value of initial time [s].
+  set Initial time = 0.00
+
+  # Value of time at which the simulations is stopped [s].
+  set Final time   = 0.50
+
+  # Length of the discrete time step [s].
+  set Time step    = 4e-6
+end
+
+
+subsection Blood flow model parameters
+  # Momentum flux correction coefficient (Coriolis coefficient).
+  set Alpha                        = 1.0
+
+  # Value of the density of the blood [g cm^-3].
+  set Density                      = 1.05
+
+  # Friction parameter due to blood viscosity. It is function of the blood
+  # profile law chosen. See references for further explanations.
+  set Friction                     = 0.0
+end
+
+subsection Boundary condition
+  set Inflow condition type = Flux
+
+  # Mathematical expression of the inflow flux or area. The function should
+  # depend on the physical 3D space coordinates and on time.
+  subsection Inflow condition expression
+  set Function constants  = pi=3.1415926536, E=1, c0=10.0, T=8
+  set Function expression = if(t<T/(2*c0), (E*sin(2*pi/T*c0*t))^2, 0.0)
+    set Variable names      = x,y,z,t
+  end
+end
+
+subsection Output
+  # Decide wether to save the output files.
+  set Enable output                = true
+
+  # VTU is written only once every n time_steps.
+  set Print VTU every n time_steps = 100
+end
