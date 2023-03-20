@@ -1,0 +1,47 @@
+# Listing of Parameters
+# ---------------------
+
+# Remark: the numerical values are expressed w.r.t the cgs system.
+
+# Model-related parameters
+# --------------------------
+
+subsection Physical constants and models
+  subsection Beta
+     set Function constants = b0=265868
+     set Function expression = b0
+  end
+
+  subsection A0
+     set Function expression = 0.7854
+  end
+end
+
+# Refinements
+# -----------
+
+subsection Mesh and space discretization
+  set Number of refinements = 5
+end
+
+# Initial condition: area
+# -----------------------
+
+subsection Initial condition area
+  set Function expression = 0.7854
+end
+
+# Initial condition: flux
+# -----------------------
+
+subsection Initial condition flux
+  set Function expression = 0.0
+end
+
+# Linear solver settings
+# ----------------------
+
+subsection Linear solver
+  set Maximum number of iterations = 1000
+  set Tolerance = 1e-10
+end
