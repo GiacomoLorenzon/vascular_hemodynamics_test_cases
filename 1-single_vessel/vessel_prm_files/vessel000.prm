@@ -39,18 +39,6 @@ subsection Initial condition flux
   set Function expression = 0.0
 end
 
-# Boundary conditions
-# -------------------
-
-subsection Boundary conditions
-  set Inflow condition type = Flux
-
-  subsection Inflow condition flux
-    set Function constants  = pi=3.1415926536, E=1, c0=10.0, T=8
-    set Function expression = if(t<T/(2*c0), (E*sin(2*pi/T*c0*t))^2, 0.0)
-  end
-end
-
 # Linear solver settings
 # ----------------------
 
