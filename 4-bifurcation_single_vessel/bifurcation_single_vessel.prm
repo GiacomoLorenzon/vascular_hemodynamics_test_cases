@@ -1,7 +1,7 @@
 # Listing of Parameters
 # ---------------------
 # Path to the directory in which the vessel parameterfiles are saved.
-set Directory of the vessels parameters = ./bifurcation_single_vessel
+set Directory of the vessels parameters = ./vessel_prm_files
 
 # Polynomial degree of the finite element space
 set Finite element polynomial degree    = 1
