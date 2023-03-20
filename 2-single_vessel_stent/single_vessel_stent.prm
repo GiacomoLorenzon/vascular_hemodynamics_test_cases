@@ -51,5 +51,5 @@ subsection Output
   set Enable output                = true
 
   # VTU is written only once every n time_steps.
-  set Print VTU every n time_steps = 100
+  set Print VTU every n time_steps = 250
 end
