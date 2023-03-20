@@ -13,8 +13,12 @@ The available tests are:
 3. Single vessel with stent implant and adaptive mesh;
 4. Bifurcation of a single vessel.
 
-Each folder contains two subfolders: **data** has in it the input files,
-whereas **results** stores the output of those very same simulations.
+Each folder contains:
+ - a subfolder **vessel_prm_files**, which has in it the 
+ **<kbd>.prm</kbd>** input files for the vessel instances;
+ - a **<kbd>.vtk</kbd>** file containing the topology of the network;
+ - a **<kbd>.prm</kbd>** file named as the test folder;
+ - a **<kbd>result.zip</kbd>** which stores the output of those very same simulations.
 
 ## Get the software
 To download, install or use **<kbd>life<sup>x</sup></kbd>**, please refer to
