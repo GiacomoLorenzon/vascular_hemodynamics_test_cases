@@ -1,0 +1,61 @@
+
+# Listing of Parameters
+# ---------------------
+
+subsection Physical constants and models
+  # Mathematical expression of the wall stiffness. The function is defined
+  # on the reference domain [-1, 1].
+  subsection Beta
+     set Function constants  = n=3, b0= 2.65868e5, b1= 2.65868e6, l=0.3333333333
+     set Function expression = if(abs(x)<l,b0+(b1-b0)*exp(1-1/( 1-( 2*(x/l)^(1+2*n)/( 1+(x/l)^(2*n) ) )^2 )), b0 )
+  end
+
+  # Mathematical expression of the area profile when the pressure
+  # is equal to the external pressure. The function is defined on the
+  # reference domain [-1, 1].
+  subsection A0
+     set Function expression = 0.7854
+  end
+end
+
+subsection Mesh and space discretization
+  # Number of uniform refinements of the mesh.
+  set Number of refinements = 5
+end
+
+subsection Triangulation
+  # Choose if you want to adapt the mesh refinement to the stiffness,
+  # getting it more refined where its derivative is steeper.
+  set Adapt the mesh to the stiffness = true
+
+  # Fraction of the cell identified by the Kelly estimator that will 
+  # be actually refined.
+  set Fraction of cells to refine = 0.33
+
+  # Maximum number of intervals flagged at each iteration of the
+  # refinement algorithm.
+  set Maximum number of cells = 64
+
+  # Minimuim size of the mesh element after refinement.
+  set Minimum mesh size = 0.000977
+end
+
+subsection Initial condition area
+  # Mathematical expression of the initial condition of the area. The 
+  # function is defined on the reference domain [-1, 1].
+  set Function expression = 0.7854
+end
+
+subsection Initial condition flux
+  # Mathematical expression of the initial condition of the flux. The 
+  # function is defined on the reference domain [-1, 1].
+  set Function expression = 0.0
+end
+
+subsection Linear solver
+  # Maximum number of iterations allowed for the linear solver.
+  set Maximum number of iterations = 1000
+
+  # Stop condition on the relative tolerance.
+  set Tolerance = 1e-10
+end
