@@ -1,7 +1,7 @@
 # Listing of Parameters
 # ---------------------
 # Path to the directory in which the vessel parameter files are saved.
-set Directory of the vessels parameters = ./3-single_vessel_stent_mesh_adaptivity/single_vessel_stent_mesh_adaptivity
+set Directory of the vessels parameters = ./3-single_vessel_stent_mesh_adaptivity/vessel_prm_files
 
 # Polynomial degree of the finite element space
 set Finite element polynomial degree    = 1
