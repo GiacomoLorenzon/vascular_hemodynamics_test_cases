@@ -1,3 +1,4 @@
+
 # Listing of Parameters
 # ---------------------
 
@@ -19,7 +20,24 @@ end
 
 subsection Mesh and space discretization
   # Number of uniform refinements of the mesh.
-  set Number of refinements = 9
+  set Number of refinements = 5
+end
+
+subsection Triangulation
+  # Choose if you want to adapt the mesh refinement to the stiffness,
+  # getting it more refined where its derivative is steeper.
+  set Adapt the mesh to the stiffness = true
+
+  # Fraction of the cell identified by the Kelly estimator that will 
+  # be actually refined.
+  set Fraction of cells to refine = 0.33
+
+  # Maximum number of intervals flagged at each iteration of the
+  # refinement algorithm.
+  set Maximum number of cells = 64
+
+  # Minimuim size of the mesh element after refinement.
+  set Minimum mesh size = 0.000977
 end
 
 subsection Initial condition area
@@ -37,7 +55,7 @@ end
 subsection Linear solver
   # Maximum number of iterations allowed for the linear solver.
   set Maximum number of iterations = 1000
-  
+
   # Stop condition on the relative tolerance.
   set Tolerance = 1e-10
 end
