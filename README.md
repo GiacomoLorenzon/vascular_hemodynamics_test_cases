@@ -1,6 +1,5 @@
-# <img alt="lifex" width="150" src="https://gitlab.com/lifex/lifex/-/raw/main/doc/logo/lifex.png" />
-
 ## Content
+# [<img alt="lifex" width="150" src="https://gitlab.com/lifex/lifex/-/raw/main/doc/logo/lifex.png" />](https://lifex.gitlab.io/lifex/)
 This repository contains the example files needed to run some test cases for the
 1D simulation of the hemodynamics in a vessels network.
 Those files are supposed to be used within the **<kbd>life<sup>x</sup></kbd>**
