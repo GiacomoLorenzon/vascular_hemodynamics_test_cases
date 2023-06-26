@@ -21,12 +21,12 @@ Each folder contains:
 
 After installing and compiling **<kbd>life<sup>x</sup></kbd>**, you can copy and paste
 the folder of a test case **in the same path** of the executable
-**<kbd>lifex_example_vessels_network_1D</kbd>**. Then you can launch the simulation with
+**<kbd>lifex_example_vessels_network_1D</kbd>**. Then, you can launch the simulation with
 ```
 ./lifex_example_vessels_network_1D -f 1-single_vessel/single_vessel.prm -o 1-single_vessel_output
 ```
 This starts the first simulation and saves the output files within the folder
-**<kbd>1-single_vessel_output</kbd>**. Then you can compare them with the results provided,
+**<kbd>1-single_vessel_output</kbd>**. Then, you can compare them with the results provided,
 for example in ParaView.
 
 ## Get the software
