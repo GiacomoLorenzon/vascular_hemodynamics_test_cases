@@ -8,8 +8,8 @@ Those files are supposed to be used within the **<kbd>life<sup>x</sup></kbd>**
 ## Tests list
 The available tests are:
 1. Single vessel;
-2. Single vessel with stent implant;
-3. Single vessel with stent implant and adaptive mesh;
+2. Single vessel with stent implanted;
+3. Single vessel with stent implanted and adaptive mesh;
 4. Bifurcation of a single vessel.
 
 Each folder contains:
@@ -27,7 +27,7 @@ the folder of a test case **in the same path** of the executable
 ```
 This starts the first simulation and saves the output files within the folder
 **<kbd>1-single_vessel_output</kbd>**. Then you can compare them with the results provided,
-for example in Paraview.
+for example in ParaView.
 
 ## Get the software
 To download, install or use **<kbd>life<sup>x</sup></kbd>**, please refer to
